@@ -13,13 +13,13 @@ async function readContract() {
    const tokenTotalSupply = await contract.totalSupply();
 //    const accountBalance = await contract.balanceOf("0x25B313158Ce11080524DcA0fD01141EeD5f94b81");
 //    formatEther(wei, ethers.BigNumberish);
-  
+  const myAccBal = await provider.getBalance("0x25B313158Ce11080524DcA0fD01141EeD5f94b81");
 
    console.log("token name is "+ tokenName);
    console.log("token symbol is "+ tokenSymbol);
    console.log("token decimal is "+ tokenDecimal);
    console.log("token total supply is "+ tokenTotalSupply);
-//    console.log("my account balance is "+ accountBalance);
+   console.log("my account balance is "+ myAccBal);
 
 }
 
